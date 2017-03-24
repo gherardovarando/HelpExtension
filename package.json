@@ -2,7 +2,7 @@
   "name": "helpextension",
   "version": "0.0.1",
   "description": "help for Atlas app",
-  "main": "helpExt.js",
+  "main": "HelpExtension.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
