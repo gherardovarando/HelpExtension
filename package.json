@@ -1,0 +1,24 @@
+{
+  "name": "helpext",
+  "version": "0.0.1",
+  "description": "help for Atlas app",
+  "main": "helpExt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gherardovarando/helpExt.git"
+  },
+  "keywords": [
+    "Atlas",
+    "help",
+    "wiki"
+  ],
+  "author": "Gherardo Varando <gherardo.varando@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gherardovarando/helpExt/issues"
+  },
+  "homepage": "https://github.com/gherardovarando/helpExt#readme"
+}
