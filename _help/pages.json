@@ -1,7 +1,7 @@
 {
     "pages":[ {
         "id": "about",
-        "title": "mapManager",
+        "title": "About",
         "file": "about.md",
         "icon": "icon icon-home"
     },

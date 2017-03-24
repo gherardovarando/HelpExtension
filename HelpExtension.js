@@ -54,9 +54,11 @@ marked.setOptions({
 
 class HelpExtension extends GuiExtension {
 
-    constructor(gui) {
-        super(gui);
-        this.icon = 'fa fa-question fa-3x';
+    constructor() {
+        super({
+         icon:'fa fa-question'
+        });
+
     }
 
 
