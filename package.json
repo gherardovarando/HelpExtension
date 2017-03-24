@@ -15,6 +15,10 @@
     "help",
     "wiki"
   ],
+  "dependencies": {
+    "electrongui": "github:gherardovarando/electrongui",
+    "marked": "^0.3.6"
+  },
   "author": "Gherardo Varando <gherardo.varando@gmail.com>",
   "license": "GPL-3.0",
   "bugs": {
