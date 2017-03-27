@@ -28,41 +28,43 @@ const {
 } = require('electrongui');
 const fs = require('fs');
 const marked = require('marked');
-const renderer = new marked.Renderer();
 
-renderer.link = function(href, title, text) {
-    if (!text) text = href;
-    if (!title) title = href;
-    if (href.includes("@")) {
-        return (href);
-        return (`<a href="mailto:${href}" title="${title}" target="_parent"> ${text} </a>`);
-    }
-    if (href.includes('http') | href.includes('www')) {
-        return (`<a href="#" title="${title}" onclick="gui.extensionsManager.extensions.helpPage.loadurl('${href}');"> ${text} </a>`);
-    }
-    return (`<a href="#" role="button" title="${title}" onclick="gui.extensionsManager.extensions.helpPage.displayPage('${href}');"> ${text} </a>`);
-
-}
-
-renderer.image = function(href, title, text) {
-    return (`<img src="${gui.extensionsManager.extensions.helpPage.getPagesDir()}/${href}" alt="${text}" title="${title}"></img>`)
-}
-
-marked.setOptions({
-    renderer: renderer
-});
 
 class HelpExtension extends GuiExtension {
 
     constructor() {
         super({
-         icon:'fa fa-question'
+            icon: 'fa fa-question'
         });
 
     }
 
 
     activate() {
+
+        const renderer = new marked.Renderer();
+
+        renderer.link = (href, title, text) => {
+            if (!text) text = href;
+            if (!title) title = href;
+            if (href.includes("@")) {
+                return (href);
+                return (`<a href="mailto:${href}" title="${title}" target="_parent"> ${text} </a>`);
+            }
+            if (href.includes('http') | href.includes('www')) {
+                return (`<a href="#" title="${title}" onclick="gui.extensionsManager.extensions.helpPage.loadurl('${href}');"> ${text} </a>`);
+            }
+            return (`<a href="#" role="button" title="${title}" onclick="gui.extensionsManager.extensions.helpPage.displayPage('${href}');"> ${text} </a>`);
+
+        }
+
+        renderer.image = (href, title, text) => {
+            return (`<img src="${this.getPagesDir()}/${href}" alt="${text}" title="${title}"></img>`)
+        }
+
+        marked.setOptions({
+            renderer: renderer
+        });
 
         //add the sidebar
         this.sidebar = new Sidebar(this.element);
