@@ -36,7 +36,6 @@ class HelpExtension extends GuiExtension {
         super({
             icon: 'fa fa-question'
         });
-
     }
 
 
