@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gherardovarando/helpExt.git"
+    "url": "git+https://github.com/gherardovarando/HelpExtension.git"
   },
   "keywords": [
     "Atlas",
@@ -20,9 +20,9 @@
     "marked": "^0.3.6"
   },
   "author": "Gherardo Varando <gherardo.varando@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gherardovarando/helpExt/issues"
+    "url": "https://github.com/gherardovarando/HelpExtension/issues"
   },
-  "homepage": "https://github.com/gherardovarando/helpExt#readme"
+  "homepage": "https://github.com/gherardovarando/HelpExtension#readme"
 }
